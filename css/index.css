@@ -1,0 +1,23 @@
+body {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+body::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+body::-webkit-scrollbar-track {
+  width: 6px;
+  background-color: #f4f7f8;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #d4d4d5;
+  background-clip: padding-box;
+  min-height: 28px;
+  border-radius: 6px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #ddd;
+}
+/*# sourceMappingURL=index.css.map */
