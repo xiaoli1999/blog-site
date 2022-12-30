@@ -1,23 +1,69 @@
+@font-face {
+  font-family: Time-Number;
+  src: url('../font/Time-Number.ttf');
+}
+@font-face {
+  font-family: Art;
+  src: url('../font/Art.ttf');
+}
+* {
+  -moz-user-select: none;
+  /*火狐*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -ms-user-select: none;
+  /*IE10*/
+  user-select: none;
+}
 body {
   position: relative;
   width: 100%;
   height: auto;
+  background: #e5e4e4;
+  font-family: 'Art';
+  font-size: 18px;
 }
-body::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+body .bg {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: url("../img/bg.jpg") center no-repeat;
+  background-size: cover;
+  z-index: -1;
 }
-body::-webkit-scrollbar-track {
-  width: 6px;
-  background-color: #f4f7f8;
+body > nav {
+  width: 100%;
+  max-width: 1440px;
+  height: 80vh;
+  margin: 10vh auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 2px 2px 16px 1.5px #f4f4f460;
+  color: #f4f4f4;
 }
-body::-webkit-scrollbar-thumb {
-  background-color: #d4d4d5;
-  background-clip: padding-box;
-  min-height: 28px;
-  border-radius: 6px;
+body > nav .nav-left {
+  width: 38%;
 }
-body::-webkit-scrollbar-thumb:hover {
-  background: #ddd;
+body > nav .nav-left .nav-left-date > p {
+  font-size: 24px;
+  color: #f4f4f4;
+}
+body > nav .nav-left .nav-left-date > span {
+  font-size: 64px;
+  color: #f4f4f4;
+  font-family: 'Time-Number';
+}
+body > nav .nav-right {
+  width: 58%;
+}
+body > nav img {
+  background: #dae5e0b5;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: inset 3px 3px 6px #bfc5c3, inset -6px -6px 12px #f5f5f5, 2px 2px 15px 1px #3a0a0a80;
 }
 /*# sourceMappingURL=index.css.map */
