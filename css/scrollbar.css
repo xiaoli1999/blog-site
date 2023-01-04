@@ -4,16 +4,16 @@ body::-webkit-scrollbar {
 }
 body::-webkit-scrollbar-track {
   width: 6px;
-  background-color: #f4f4f480;
+  background-color: #f2f4f8;
   border-radius: 6px;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: #d4d4d5;
+  background-color: #c0c2c480;
   background-clip: padding-box;
   min-height: 28px;
   border-radius: 6px;
 }
 body::-webkit-scrollbar-thumb:hover {
-  background: #ddd;
+  background: #c0c2c4;
 }
 /*# sourceMappingURL=scrollbar.css.map */
