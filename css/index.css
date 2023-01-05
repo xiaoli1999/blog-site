@@ -1,11 +1,3 @@
-@font-face {
-  font-family: Time-Number;
-  src: url('../font/Time-Number.ttf');
-}
-@font-face {
-  font-family: Art;
-  src: url('../font/Art.otf');
-}
 * {
   -moz-user-select: none;
   /*火狐*/
@@ -14,6 +6,22 @@
   -ms-user-select: none;
   /*IE10*/
   user-select: none;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+img {
+  display: block;
+}
+:root {
+  --bg-img: url("../img/bg.jpg");
+}
+@font-face {
+  font-family: Time-Number;
+  src: url('../font/Time-Number.ttf');
+}
+@font-face {
+  font-family: Art;
+  src: url('../font/Art.otf');
 }
 body {
   position: relative;
@@ -23,8 +31,17 @@ body {
   font-family: 'Art';
   font-size: 14px;
 }
+body .bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: var(--bg-img) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
 body nav {
-  position: relative;
   width: 100%;
   height: 100vh;
   margin: 0 auto;
@@ -62,18 +79,6 @@ body nav .nav-wrap img {
   padding: 8px;
   box-shadow: inset 3px 3px 6px #bfc5c3, inset -6px -6px 12px #f5f5f5, 2px 2px 15px 1px #3a0a0a80;
 }
-body nav:before {
-  position: absolute;
-  display: block;
-  content: '';
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background: url("../img/bg.jpg") center no-repeat;
-  background-size: cover;
-  z-index: -1;
-}
 body header {
   position: sticky;
   box-sizing: border-box;
@@ -81,17 +86,20 @@ body header {
   height: 48px;
   padding: 0 calc((100% - 1440px) / 2);
   top: 0;
+  background: #ffffff20;
   backdrop-filter: blur(12px);
-  box-shadow: 0 2px 8px 1px #975a8357;
+  box-shadow: inset 0 2px 8px 1px #975a8357;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 99;
 }
 body header .header-name {
   width: 240px;
   display: flex;
   align-items: center;
   margin-right: 16px;
+  color: #fff;
 }
 body header .header-name > img {
   width: 40px;
@@ -122,16 +130,50 @@ body main > aside {
   margin-right: 16px;
   flex-shrink: 0;
 }
+body main > aside .aside-personal {
+  padding: 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: inset 0 0 8px 2px #f4f4f480;
+  border-radius: 8px;
+  text-align: center;
+}
 body main > aside .aside-personal > img {
   display: block;
-  width: 120px;
-  height: 120px;
-  margin: 36px auto;
+  width: 108px;
+  height: 108px;
+  margin: 0 auto 16px;
   border-radius: 100%;
+}
+body main > aside .aside-personal .aside-personal-name {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: calc(16px / 2);
+}
+body main > aside .aside-personal .aside-personal-job {
+  color: #f2f2f2;
+  margin-bottom: calc(16px / 2);
+}
+body main > aside .aside-personal .aside-personal-introduce {
+  color: #9e9e9e;
+  margin-bottom: calc(16px / 2);
+}
+body main > aside .aside-personal .aside-personal-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 body main > section {
   width: 100%;
-  background: #c6c8c9;
+}
+body main > section .main-my {
+  border-radius: 8px;
+  height: 320px;
+  box-shadow: 2px 2px 16px 1.5px #f4f4f460;
+  margin-bottom: 16px;
+  background-color: #fff;
+  background-image: linear-gradient(90deg, rgba(159, 219, 252, 0.15) 3%, transparent 0), linear-gradient(1turn, rgba(159, 219, 252, 0.15) 3%, transparent 0);
+  background-size: 20px 20px;
+  background-position: 50%;
 }
 /* 水滴形状 */
 /*# sourceMappingURL=index.css.map */
