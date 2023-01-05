@@ -76,10 +76,62 @@ body nav:before {
 }
 body header {
   position: sticky;
+  box-sizing: border-box;
   width: 100%;
   height: 48px;
+  padding: 0 calc((100% - 1440px) / 2);
   top: 0;
-  inset: 0;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 8px 1px #975a8357;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body header .header-name {
+  width: 240px;
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+}
+body header .header-name > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  margin-right: 16px;
+}
+body header .header-menu {
+  display: flex;
+}
+body header .header-menu > p {
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-left: 16px;
+  cursor: pointer;
+  transition: all 0.4s;
+  box-shadow: 4px 4px 6px 1px #d9dce6, inset 4px 5px 6px #e2e4e8, inset -3px -4px 8px #f5f9fd, inset 4px 3px 4px #d9dce6;
+}
+body main {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  margin: 16px auto;
+}
+body main > aside {
+  width: 240px;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+body main > aside .aside-personal > img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 36px auto;
+  border-radius: 100%;
+}
+body main > section {
+  width: 100%;
+  background: #c6c8c9;
 }
 /* 水滴形状 */
 /*# sourceMappingURL=index.css.map */

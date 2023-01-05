@@ -99,10 +99,78 @@ body {
 
     header {
         position: sticky;
+        box-sizing: border-box;
         width: 100%;
         height: 48px;
+        padding: 0 calc((100% - 1440px) / 2);
         top: 0;
-        inset: 0;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 2px 8px 1px #975a8357;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header-name {
+            width: 240px;
+            display: flex;
+            align-items: center;
+            margin-right: @marginSize;
+
+            > img {
+                width: 40px;
+                height: 40px;
+                border-radius: 40px;
+                margin-right: @marginSize;
+            }
+        }
+
+        .header-menu {
+            display: flex;
+
+            > p {
+                padding: 8px 16px;
+                border-radius: 4px;
+                margin-left: @marginSize;
+                cursor: pointer;
+                transition: all .4s;
+
+                box-shadow: 4px 4px 6px 1px #d9dce6,
+                inset 4px 5px 6px #e2e4e8,
+                    inset -3px -4px 8px #f5f9fd,
+                inset 4px 3px 4px #d9dce6;
+            }
+        }
+    }
+
+    main {
+        width: 100%;
+        max-width: 1440px;
+        display: flex;
+        justify-content: space-between;
+        margin: @marginSize auto;
+
+        > aside {
+            width: 240px;
+            margin-right: @marginSize;
+            flex-shrink: 0;
+
+            .aside-personal {
+                > img {
+                    display: block;
+                    width: 120px;
+                    height: 120px;
+                    margin: 36px auto;
+                    border-radius: 100%;
+                }
+            }
+        }
+
+        > section {
+            width: 100%;
+            background: #c6c8c9;
+        }
+
+
     }
 }
 
