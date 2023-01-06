@@ -116,7 +116,7 @@ body header .header-menu > p {
   margin-left: 16px;
   cursor: pointer;
   transition: all 0.4s;
-  box-shadow: 4px 4px 6px 1px #d9dce6, inset 4px 5px 6px #e2e4e8, inset -3px -4px 8px #f5f9fd, inset 4px 3px 4px #d9dce6;
+  color: #f2f8fa;
 }
 body main {
   width: 100%;
